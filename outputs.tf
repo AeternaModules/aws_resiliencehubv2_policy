@@ -1,7 +1,3 @@
-output "resiliencehubv2_policies_id" {
-  description = "Map of id values across all resiliencehubv2_policies, keyed the same as var.resiliencehubv2_policies"
-  value       = { for k, v in aws_resiliencehubv2_policy.resiliencehubv2_policies : k => v.id if v.id != null && length(v.id) > 0 }
-}
 output "resiliencehubv2_policies_arn" {
   description = "Map of arn values across all resiliencehubv2_policies, keyed the same as var.resiliencehubv2_policies"
   value       = { for k, v in aws_resiliencehubv2_policy.resiliencehubv2_policies : k => v.arn if v.arn != null && length(v.arn) > 0 }
